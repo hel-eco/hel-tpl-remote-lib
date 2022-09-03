@@ -24,7 +24,9 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 //   require(resolveApp('package.json')).homepage,
 //   process.env.PUBLIC_URL
 // );
-const publicUrlOrPath = subApp.getPublicPathOrUrl('/');
+// const publicUrlOrPath = subApp.getPublicPathOrUrl('/');
+console.log('subApp.getPublicPathOrUrl()', subApp.getPublicPathOrUrl('/'));
+const publicUrlOrPath = '/';
 
 const moduleFileExtensions = [
   'web.mjs',

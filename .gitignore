@@ -10,6 +10,8 @@ dwt-result.json
 dwt-tmp-result
 
 
+package-lock.json
+
 # dependencies
 /node_modules
 /.pnp
