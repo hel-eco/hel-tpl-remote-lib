@@ -1,11 +1,11 @@
 {
-  "name": "zzl1",
-  "appGroupName": "zzl1",
+  "name": "hel-tpl-remote-lib",
+  "appGroupName": "hel-tpl-remote-lib",
   "main": "hel_proxy/entry.js",
   "module": "hel_proxy_es/entry.js",
   "unpkg": "hel_dist/entry.js",
   "types": "lib/entrance/libTypes.ts",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "dependencies": {
     "@types/lodash": "^4.14.182",
     "hel-lib-proxy": "^3.8.1",
