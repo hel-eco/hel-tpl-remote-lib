@@ -21,7 +21,8 @@ specifiers:
   file-loader: 4.3.0
   fs-extra: ^10.1.0
   hel-dev-utils: 2.2.2
-  hel-lib-proxy: ^3.8.1
+  hel-lib-proxy: 3.8.3
+  hel-micro: ^3.8.3
   hel-micro-core: ^3.8.3
   hel-types: ^3.6.0
   html-webpack-plugin: 4.0.0-beta.11
@@ -50,7 +51,8 @@ specifiers:
 
 dependencies:
   '@types/lodash': 4.14.184
-  hel-lib-proxy: 3.8.1_nfubiyeeyzbzl4taqlmbrc64re
+  hel-lib-proxy: 3.8.3_nfubiyeeyzbzl4taqlmbrc64re
+  hel-micro: 3.8.3_nfubiyeeyzbzl4taqlmbrc64re
   hel-micro-core: 3.8.3_hel-types@3.6.0
   hel-types: 3.6.0
   lodash: 4.17.21
@@ -4881,8 +4883,8 @@ packages:
     resolution: {integrity: sha512-mYROv1+qPg2yViIa/31NdIZoeMoza9SlDW8AxUYEBNZLSewIFV4QxKsilvrP4rt5AWjvIGVJOZn1SsY3mv56vw==}
     dev: true
 
-  /hel-lib-proxy/3.8.1_nfubiyeeyzbzl4taqlmbrc64re:
-    resolution: {integrity: sha512-2v77mjUfzHH62UO7Tp+J6EG+IcubF5yuJd/DyzkKGnLNY8i76+zXG+i9cPOGC4V8vmQOBVG5VBQhrCLuE82MKw==}
+  /hel-lib-proxy/3.8.3_nfubiyeeyzbzl4taqlmbrc64re:
+    resolution: {integrity: sha512-mrtVfYyubknPr8+sGPQOMVPhJylv39MhFMVxwqilAriCz7E7hSVk93KDS51gHRTNpPdRBraddKC1muxxNWXe5g==}
     peerDependencies:
       hel-micro-core: ^3.8.0
       hel-types: ^3.6.0
@@ -4898,6 +4900,17 @@ packages:
     dependencies:
       hel-types: 3.6.0
     dev: false
+
+  /hel-micro/3.8.3_nfubiyeeyzbzl4taqlmbrc64re:
+    resolution: {integrity: sha512-sWQSbeVd1oq2bg5QLu9LvfSPHbzBcUoZ6gn2pSzL35xPOFn0He3uHyRupyZTGYBfuSTrEwg4AbaLqo4TbzhIIg==}
+    peerDependencies:
+      hel-micro-core: ^3.8.0
+      hel-types: ^3.6.0
+    dependencies:
+      hel-micro-core: 3.8.3_hel-types@3.6.0
+      hel-types: 3.6.0
+    dev: false
+    bundledDependencies: []
 
   /hel-types/3.6.0:
     resolution: {integrity: sha512-sevGPX52ZYcRZ6vN69O1hxz7ksvLi/790Wyhyso7duFKZIzJQPeA0ibbTTUdYTWHAMykiudkVZC7Nmc9y57xPw==}

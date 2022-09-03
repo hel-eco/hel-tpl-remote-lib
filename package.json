@@ -8,7 +8,8 @@
   "version": "2.0.0",
   "dependencies": {
     "@types/lodash": "^4.14.182",
-    "hel-lib-proxy": "^3.8.1",
+    "hel-lib-proxy": "3.8.3",
+    "hel-micro": "^3.8.3",
     "hel-micro-core": "^3.8.3",
     "hel-types": "^3.6.0",
     "lodash": "^4.17.21"
@@ -21,7 +22,7 @@
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "check": "node ./scripts/check",
-    "start": "cross-env HOST=localhost PORT=3000 npm run app",
+    "start": "cross-env HOST=localhost PORT=3001 npm run app",
     "app": "node scripts/start.js",
     "build_stub": "npm run build && npm run build_bundle",
     "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
