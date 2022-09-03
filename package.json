@@ -9,15 +9,19 @@
   "dependencies": {
     "@types/lodash": "^4.14.182",
     "hel-lib-proxy": "^3.8.1",
+    "hel-micro-core": "^3.8.3",
+    "hel-types": "^3.6.0",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "hel-lib-proxy": "^3.8.1"
+    "hel-lib-proxy": "^3.8.1",
+    "hel-micro-core": "^3.8.3",
+    "hel-types": "^3.6.0"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "check": "node ./scripts/check",
-    "start": "npm run app",
+    "start": "cross-env HOST=localhost PORT=3000 npm run app",
     "app": "node scripts/start.js",
     "build_stub": "npm run build && npm run build_bundle",
     "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
@@ -28,6 +32,8 @@
     "build_proxy_umd": "tsc & node ./scripts/replaceToRelativePath.js & rollup -c",
     "build_proxy_es": "tsc & node ./scripts/replaceToRelativePath.js & cross-env BUILD_ENV=es rollup -c",
     "build_bundle": "tsc & cross-env BUNDLE=true node ./scripts/replaceToRelativePath.js & cross-env BUNDLE=true node scripts/build.js",
+    "build_cust": "npm run set_home_page \"npm run build && npm run build_meta\"",
+    "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
     "lint": "eslint ./src --ext ts,tsx",
     "lintfix": "eslint ./src --ext ts,tsx --fix",
     "test": "jest"
@@ -71,7 +77,8 @@
     "eslint-loader": "3.0.3",
     "eslint-plugin-import": "2.20.1",
     "file-loader": "4.3.0",
-    "hel-dev-utils": "^2.1.2",
+    "fs-extra": "^10.1.0",
+    "hel-dev-utils": "2.2.2",
     "html-webpack-plugin": "4.0.0-beta.11",
     "jest": "24.9.0",
     "jest-resolve": "24.9.0",

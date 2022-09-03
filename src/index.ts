@@ -11,9 +11,7 @@ async function main() {
   // 注意此处传递的是 default
   libReady(LIB_NAME, libProperties.default);
 
-  debugger;
   if (isMasterApp()) {
-    debugger;
     await import('./loadApp');
   }
 };

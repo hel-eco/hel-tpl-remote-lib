@@ -19,8 +19,11 @@ specifiers:
   eslint-loader: 3.0.3
   eslint-plugin-import: 2.20.1
   file-loader: 4.3.0
-  hel-dev-utils: ^2.1.2
+  fs-extra: ^10.1.0
+  hel-dev-utils: 2.2.2
   hel-lib-proxy: ^3.8.1
+  hel-micro-core: ^3.8.3
+  hel-types: ^3.6.0
   html-webpack-plugin: 4.0.0-beta.11
   jest: 24.9.0
   jest-resolve: 24.9.0
@@ -47,7 +50,9 @@ specifiers:
 
 dependencies:
   '@types/lodash': 4.14.184
-  hel-lib-proxy: 3.8.1
+  hel-lib-proxy: 3.8.1_nfubiyeeyzbzl4taqlmbrc64re
+  hel-micro-core: 3.8.3_hel-types@3.6.0
+  hel-types: 3.6.0
   lodash: 4.17.21
 
 devDependencies:
@@ -68,7 +73,8 @@ devDependencies:
   eslint-loader: 3.0.3_s4p5obgc5rn2wrc7rinrdszb4m
   eslint-plugin-import: 2.20.1_inh3l5yejh4yosh34bfcghfssa
   file-loader: 4.3.0_webpack@4.42.0
-  hel-dev-utils: 2.1.2
+  fs-extra: 10.1.0
+  hel-dev-utils: 2.2.2
   html-webpack-plugin: 4.0.0-beta.11_webpack@4.42.0
   jest: 24.9.0
   jest-resolve: 24.9.0
@@ -4506,6 +4512,15 @@ packages:
       readable-stream: 2.3.7
     dev: true
 
+  /fs-extra/10.1.0:
+    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      graceful-fs: 4.2.10
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: true
+
   /fs-extra/4.0.3:
     resolution: {integrity: sha512-q6rbdDd1o2mAnQreO7YADIxf/Whx4AHBiRf6d+/cVT8h44ss+lHgxf1FemcqDnQt9X3ct4McHr+JMGlYSsK7Cg==}
     dependencies:
@@ -4862,19 +4877,24 @@ packages:
     hasBin: true
     dev: true
 
-  /hel-dev-utils/2.1.2:
-    resolution: {integrity: sha512-0gelhHrDhNpw64szbBcaK34j4NlCililJ+lPC7U/4honkfUvY27Qa/Mwze1vWhgNnyDWFraF78j+Ep7C+qSdcQ==}
+  /hel-dev-utils/2.2.2:
+    resolution: {integrity: sha512-mYROv1+qPg2yViIa/31NdIZoeMoza9SlDW8AxUYEBNZLSewIFV4QxKsilvrP4rt5AWjvIGVJOZn1SsY3mv56vw==}
     dev: true
 
-  /hel-lib-proxy/3.8.1:
+  /hel-lib-proxy/3.8.1_nfubiyeeyzbzl4taqlmbrc64re:
     resolution: {integrity: sha512-2v77mjUfzHH62UO7Tp+J6EG+IcubF5yuJd/DyzkKGnLNY8i76+zXG+i9cPOGC4V8vmQOBVG5VBQhrCLuE82MKw==}
+    peerDependencies:
+      hel-micro-core: ^3.8.0
+      hel-types: ^3.6.0
     dependencies:
-      hel-micro-core: 3.8.3
+      hel-micro-core: 3.8.3_hel-types@3.6.0
       hel-types: 3.6.0
     dev: false
 
-  /hel-micro-core/3.8.3:
+  /hel-micro-core/3.8.3_hel-types@3.6.0:
     resolution: {integrity: sha512-1aAf8QqJE5+wzbFnPuuBSwZcG7JH/9BMdwkDwifUlp1b5a6I87UJ9HqybHFKLDPBpE2krcP60KhAipZX52qvjg==}
+    peerDependencies:
+      hel-types: ^3.6.0
     dependencies:
       hel-types: 3.6.0
     dev: false
@@ -6091,6 +6111,14 @@ packages:
 
   /jsonfile/4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
+    optionalDependencies:
+      graceful-fs: 4.2.10
+    dev: true
+
+  /jsonfile/6.1.0:
+    resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+    dependencies:
+      universalify: 2.0.0
     optionalDependencies:
       graceful-fs: 4.2.10
     dev: true
@@ -9112,6 +9140,11 @@ packages:
   /universalify/0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
+    dev: true
+
+  /universalify/2.0.0:
+    resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
+    engines: {node: '>= 10.0.0'}
     dev: true
 
   /unpipe/1.0.0:
