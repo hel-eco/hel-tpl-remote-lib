@@ -23,6 +23,7 @@ function forceRender(num = 0) {
     <h1>welcome to develop  your first hel remote module ${LIB_NAME}</h1>
     <h2>initial num : ${num}</h2>
     <button onclick="__changeNum__()">click</button>
+    <span style="color:red;">you can delete this file</span>
   </div>
   `;
 }
