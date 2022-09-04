@@ -11,8 +11,6 @@ async function main() {
   // 注意此处传递的是 default
   libReady(LIB_NAME, libProperties.default);
 
-  // 本地启动自己载入自己时，走的特殊逻辑
-  // 仅用于演示，可删除或者根据自己想在本地启动时做一些其他工作而调整
   if (isMasterApp()) {
     await import('./loadApp');
   }

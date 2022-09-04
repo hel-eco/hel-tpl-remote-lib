@@ -5,9 +5,10 @@
   "module": "hel_proxy_es/entry.js",
   "unpkg": "hel_dist/entry.js",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.0.2",
+  "version": "2.0.0",
   "dependencies": {
     "@types/lodash": "^4.14.182",
+<<<<<<< HEAD
     "hel-lib-proxy": "^3.8.3",
     "hel-micro": "^3.8.4",
     "lodash": "^4.17.21"
@@ -15,11 +16,27 @@
   "peerDependencies": {
     "hel-lib-proxy": "^3.8.3",
     "hel-micro": "^3.8.4"
+=======
+    "hel-lib-proxy": "3.8.3",
+    "hel-micro": "^3.8.3",
+    "hel-micro-core": "^3.8.3",
+    "hel-types": "^3.6.0",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "hel-lib-proxy": "^3.8.1",
+    "hel-micro-core": "^3.8.3",
+    "hel-types": "^3.6.0"
+>>>>>>> ce570f8b0462b243da62d312c8f6cd5043c62f49
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "check": "node ./scripts/check",
+<<<<<<< HEAD
     "start": "cross-env HOST=localhost npm run app",
+=======
+    "start": "cross-env HOST=localhost PORT=3001 npm run app",
+>>>>>>> ce570f8b0462b243da62d312c8f6cd5043c62f49
     "app": "node scripts/start.js",
     "build_stub": "npm run build && npm run build_bundle",
     "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
@@ -30,6 +47,8 @@
     "build_proxy_umd": "tsc & node ./scripts/replaceToRelativePath.js & rollup -c",
     "build_proxy_es": "tsc & node ./scripts/replaceToRelativePath.js & cross-env BUILD_ENV=es rollup -c",
     "build_bundle": "tsc & cross-env BUNDLE=true node ./scripts/replaceToRelativePath.js & cross-env BUNDLE=true node scripts/build.js",
+    "build_cust": "npm run set_home_page \"npm run build && npm run build_meta\"",
+    "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
     "lint": "eslint ./src --ext ts,tsx",
     "lintfix": "eslint ./src --ext ts,tsx --fix",
     "test": "jest"
@@ -57,6 +76,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.9.0",
+    "@testing-library/dom": "^8.17.1",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.9.1",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
@@ -73,7 +93,11 @@
     "eslint-plugin-import": "2.20.1",
     "file-loader": "4.3.0",
     "fs-extra": "^10.1.0",
+<<<<<<< HEAD
     "hel-dev-utils": "^2.3.0",
+=======
+    "hel-dev-utils": "2.2.2",
+>>>>>>> ce570f8b0462b243da62d312c8f6cd5043c62f49
     "html-webpack-plugin": "4.0.0-beta.11",
     "jest": "24.9.0",
     "jest-resolve": "24.9.0",
@@ -83,12 +107,14 @@
     "pnp-webpack-plugin": "1.6.4",
     "react-dev-utils": "^11.0.4",
     "replace-absolute-path": "^1.0.0",
+    "resolve": "^1.22.1",
     "resolve-url-loader": "^3.1.2",
     "rollup": "^2.56.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript": "^1.0.1",
     "terser-webpack-plugin": "2.3.5",
     "ts-pnp": "1.1.6",
+    "tslib": "^2.4.0",
     "typescript": "^4.1.3",
     "url-loader": "2.3.0",
     "webpack": "4.42.0",
