@@ -8,16 +8,18 @@
   "version": "2.0.2",
   "dependencies": {
     "@types/lodash": "^4.14.182",
-    "hel-lib-proxy": "^3.8.0",
+    "hel-lib-proxy": "^3.8.3",
+    "hel-micro": "^3.8.4",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "hel-lib-proxy": "^3.8.0"
+    "hel-lib-proxy": "^3.8.3",
+    "hel-micro": "^3.8.4"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "check": "node ./scripts/check",
-    "start": "cross-env HOST=localhost IS_LOCAL=true npm run app",
+    "start": "cross-env HOST=localhost npm run app",
     "app": "node scripts/start.js",
     "build_stub": "npm run build && npm run build_bundle",
     "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
@@ -70,11 +72,13 @@
     "eslint-loader": "3.0.3",
     "eslint-plugin-import": "2.20.1",
     "file-loader": "4.3.0",
-    "hel-dev-utils": "^1.2.2",
+    "fs-extra": "^10.1.0",
+    "hel-dev-utils": "^2.3.0",
     "html-webpack-plugin": "4.0.0-beta.11",
     "jest": "24.9.0",
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
+    "jsdom": "^20.0.0",
     "lint-staged": "^10.5.3",
     "pnp-webpack-plugin": "1.6.4",
     "react-dev-utils": "^11.0.4",
