@@ -30,7 +30,7 @@
     "build_proxy_umd": "tsc & node ./scripts/replaceToRelativePath.js & rollup -c",
     "build_proxy_es": "tsc & node ./scripts/replaceToRelativePath.js & cross-env BUILD_ENV=es rollup -c",
     "build_bundle": "tsc & cross-env BUNDLE=true node ./scripts/replaceToRelativePath.js & cross-env BUNDLE=true node scripts/build.js",
-    "build_cust": "npm run set_home_page \"npm run build && npm run build_meta\"",
+    "build_cust": "npm run set_home_page \"npm run build\"",
     "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
     "lint": "eslint ./src --ext ts,tsx",
     "lintfix": "eslint ./src --ext ts,tsx --fix",
