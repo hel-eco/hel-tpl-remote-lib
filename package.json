@@ -18,6 +18,7 @@
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
+    "prepublishOnly": "node ./scripts/prepublishOnly.js",
     "check": "node ./scripts/check",
     "start": "cross-env PORT=3001 npm run app",
     "app": "node scripts/start.js",
