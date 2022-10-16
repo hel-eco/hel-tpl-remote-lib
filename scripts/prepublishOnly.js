@@ -7,8 +7,9 @@
 const chalk = require("react-dev-utils/chalk");
 const pkg = require("../package.json");
 const fs = require("fs");
-
-const existHelMeata = fs.existsSync("../hel_dist/hel-meta.json");
+const path = require("path");
+const helMeta = require("../hel_dist/hel-meta.json");
+const existHelMeata = fs.existsSync(path.resolve(__dirname), "../hel_dist");
 
 // 检查是否执行npm run build 打包命令
 if (!existHelMeata) {
