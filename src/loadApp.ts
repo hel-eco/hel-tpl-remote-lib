@@ -24,6 +24,11 @@ function forceRender(num = 0) {
     <h2>initial num : ${num}</h2>
     <button onclick="__changeNum__()">click</button>
     <span style="color:red;">you can delete this file</span>
+    <p>
+      more details see hel-micro
+      <a href="https://github.com/tnfe/hel" target="_blank" rel="noopener noreferrer"> git</a>、
+      <a href="https://tnfe.github.io/hel" target="_blank" rel="noopener noreferrer"> doc</a>、
+    </p>
   </div>
   `;
 }
