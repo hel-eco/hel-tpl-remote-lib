@@ -1,5 +1,5 @@
 ## remote-lib-tpl
-远程仓库模板库
+基于[hel-micro](https://github.com/tnfe/hel)搭建的远程仓库模板库
 
 ## 如何参与
 - 改subApp
