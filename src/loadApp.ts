@@ -45,8 +45,10 @@ function forceRender(result = '') {
   }
   con.innerHTML = `
     <div style="padding:60px;">
-      <h1>welcome to develop your first hel remote module <span style="color:blue">${LIB_NAME}</span></h1>
-      <span style="color:red;">you can delete or edit this file, It will only run at master-app mode</span>
+      <h1>Cool, as you see this is your hel remote module <span style="color:blue">${LIB_NAME}</span></h1>
+      <span style="color:red;">you can delete or edit this file, It will only run at master-app mode</span>,
+      see the <a href="https://www.bilibili.com/video/BV1Dd4y1y7Wj/?vd_source=51bc50bf5f860e0d778c49b00d192cee" target="_blank" rel="noopener noreferrer">video</a>
+      if you want to use local debug feature.
       <h2><button onclick="__callMethod__()" style="font-size:20px">click me</button> to see changed result : ${result}</h2>
       <fieldset>
         <legend>usage snippet</legend>
