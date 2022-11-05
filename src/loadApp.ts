@@ -49,7 +49,11 @@ function forceRender(result = '') {
       <span style="color:red;">you can delete or edit this file, It will only run at master-app mode</span>,
       see the <a href="https://www.bilibili.com/video/BV1Dd4y1y7Wj/?vd_source=51bc50bf5f860e0d778c49b00d192cee" target="_blank" rel="noopener noreferrer">video</a>
       if you want to use local debug feature.
-      <h2><button onclick="__callMethod__()" style="font-size:20px">click me</button> to see changed result : ${result}</h2>
+      <br />
+      <h2>
+        <button onclick="__callMethod__()" style="font-size:20px;background-color:#ff9800;color:white;border:none;padding:6px;">click me</button>
+        to see changed result : ${result}
+      </h2>
       <fieldset>
         <legend>usage snippet</legend>
         ${usageSnippet}
