@@ -4,14 +4,39 @@
 import { LIB_NAME } from 'configs/subApp';
 import { random } from 'utils/num';
 
-function __changeNum__() {
+function __callMethod__() {
   const num = random(100);
-  forceRender(num);
+  forceRender(`${num}_${Date.now()}`);
 }
 // @ts-ignore
-window.__changeNum__ = __changeNum__;
+window.__callMethod__ = __callMethod__;
 
-function forceRender(num = 0) {
+const usageSnippet = `
+    <span style="color:#c62d31">---> lazy load mode</span>
+    <pre style="background-color:lightgray;padding-top:12px">
+    import helMicro from 'hel-micro';
+
+    export async function callRemoteMethod(){
+      const remoteLib = await helMicro.preFetchLib('${LIB_NAME}');
+      // now you can call the remote lib by 'remoteLib' reference
+    }
+    </pre>
+    <span style="color:#c62d31">---> preload mode</span>
+    <pre style="background-color:lightgray;padding-top:12px">
+    // call preFetchLib at entry js file
+    (async function(){
+      const helMicro = await import('hel-micro');
+      await helMicro.preFetchLib('${LIB_NAME}');
+      import('./loadApp'); // move your app original entry file content to this file and load it
+    })();
+
+    /** --------------------------------------------------------------------------- */
+    import remoteLib from '${LIB_NAME}';
+    remoteLib.num.random(19); // now you can call the remote safely just like local module
+    </pre>
+`;
+
+function forceRender(result = '') {
   let con = document.querySelector('#container');
   if (!con) {
     con = document.createElement('div');
@@ -19,17 +44,21 @@ function forceRender(num = 0) {
     document.body.append(con);
   }
   con.innerHTML = `
-  <div>
-    <h1>welcome to develop your first hel remote module ${LIB_NAME}</h1>
-    <h2>initial num : ${num}</h2>
-    <button onclick="__changeNum__()">click</button>
-    <span style="color:red;">you can delete this file</span>
-    <p>
-      more details see hel-micro
-      <a href="https://github.com/tnfe/hel" target="_blank" rel="noopener noreferrer"> git</a>、
-      <a href="https://tnfe.github.io/hel" target="_blank" rel="noopener noreferrer"> doc</a>、
-    </p>
-  </div>
+    <div style="padding:60px;">
+      <h1>welcome to develop your first hel remote module <span style="color:blue">${LIB_NAME}</span></h1>
+      <span style="color:red;">you can delete or edit this file, It will only run at master-app mode</span>
+      <h2><button onclick="__callMethod__()" style="font-size:20px">click me</button> to see changed result : ${result}</h2>
+      <fieldset>
+        <legend>usage snippet</legend>
+        ${usageSnippet}
+      </fieldset>
+      <p style="font-size:20px">
+        <img width="30px" style="vertical-align:middle" src="https://tnfe.gtimg.com/image/1k4xi9izbk_1651642720099.png"></img>
+        <a href="https://github.com/tnfe/hel" target="_blank" rel="noopener noreferrer">hel-micro</a>,
+        a module federation SDK which is unrelated to tool，more details see
+        <a href="https://tnfe.github.io/hel/" target="_blank" rel="noopener noreferrer">doc</a>.
+      </p>
+    </div>
   `;
 }
 
