@@ -3,18 +3,18 @@
   "appGroupName": "hel-tpl-remote-lib",
   "main": "hel_proxy/entry.js",
   "module": "hel_proxy_es/entry.js",
-  "unpkg": "hel_dist/entry.js",
+  "unpkg": "hel_proxy/entry.js",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "dependencies": {
     "@types/lodash": "^4.14.182",
-    "hel-lib-proxy": "^3.8.3",
-    "hel-micro": "^3.8.4",
+    "hel-lib-proxy": "^3.10.2",
+    "hel-micro": "^3.11.6",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "hel-lib-proxy": "^3.8.3",
-    "hel-micro": "^3.8.4"
+    "hel-lib-proxy": "^3.10.2",
+    "hel-micro": "^3.11.6"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
@@ -27,7 +27,7 @@
     "check_name": "node scripts/check.js",
     "build_dist": "node scripts/build.js",
     "build_meta": "node scripts/meta.js",
-    "build_proxy": "npm run build_proxy_umd && npm run build_proxy_es && cp ./hel_proxy/entry.js ./hel_dist",
+    "build_proxy": "npm run build_proxy_umd && npm run build_proxy_es",
     "build_proxy_umd": "tsc & node ./scripts/replaceToRelativePath.js & rollup -c",
     "build_proxy_es": "tsc & node ./scripts/replaceToRelativePath.js & cross-env BUILD_ENV=es rollup -c",
     "build_bundle": "tsc & cross-env BUNDLE=true node ./scripts/replaceToRelativePath.js & cross-env BUNDLE=true node scripts/build.js",
@@ -77,7 +77,7 @@
     "eslint-plugin-import": "2.20.1",
     "file-loader": "4.3.0",
     "fs-extra": "^10.1.0",
-    "hel-dev-utils": "^2.3.1",
+    "hel-dev-utils": "^3.0.1",
     "html-webpack-plugin": "4.0.0-beta.11",
     "jest": "24.9.0",
     "jest-resolve": "24.9.0",
