@@ -3,13 +3,13 @@
   "appGroupName": "hel-tpl-remote-lib",
   "main": "hel_proxy/entry.js",
   "module": "hel_proxy_es/entry.js",
-  "unpkg": "hel_proxy/entry.js",
+  "unpkg": "hel_dist/index.html",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "dependencies": {
     "@types/lodash": "^4.14.182",
-    "hel-lib-proxy": "^3.10.2",
-    "hel-micro": "^3.11.6",
+    "hel-lib-proxy": "^3.13.0",
+    "hel-micro": "^3.13.7",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {

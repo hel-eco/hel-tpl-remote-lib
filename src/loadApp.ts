@@ -45,7 +45,9 @@ function forceRender(result = '') {
   }
   con.innerHTML = `
     <div style="padding:60px;">
-      <h1>Cool, as you see this is your hel remote module <span style="color:blue">${LIB_NAME}</span></h1>
+      <h1>Cool, as you see this is your hel remote module
+        <a style="color:blue" href="https://github.com/hel-eco/hel-tpl-remote-lib" target="_blank" rel="noopener noreferrer">${LIB_NAME}</a>
+      </h1>
       <span style="color:red;">you can delete or edit this file, It will only run at master-app mode</span>,
       see the <a href="https://www.bilibili.com/video/BV1Dd4y1y7Wj/?vd_source=51bc50bf5f860e0d778c49b00d192cee" target="_blank" rel="noopener noreferrer">video</a>
       if you want to use local debug feature.
