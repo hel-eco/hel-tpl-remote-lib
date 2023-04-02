@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 // const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath');
 const helDevUtils = require('hel-dev-utils');
-const subApp = require('./subApp');
+const subApp = require('./appInfo');
 
 
 // Make sure any symlinks in the project folder are resolved:

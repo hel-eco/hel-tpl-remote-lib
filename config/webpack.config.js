@@ -23,14 +23,14 @@ const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpack
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 // 解决 react-monaco-editor 颜色不高亮的问题
 // const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-const subApp = require('./subApp');
+const subApp = require('./appInfo');
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = subApp.shouldUseSourceMap;
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 // const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
-const shouldInlineRuntimeChunk = true;
+const shouldInlineRuntimeChunk = false;
 
 const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
 
