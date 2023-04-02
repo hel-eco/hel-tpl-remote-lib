@@ -5,16 +5,18 @@
   "module": "hel_proxy_es/entry.js",
   "unpkg": "hel_dist/index.html",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "dependencies": {
     "@types/lodash": "^4.14.182",
+    "hel-iso": "^4.0.3",
     "hel-lib-proxy": "^4.0.1",
     "hel-micro": "^4.0.2",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "hel-lib-proxy": "^4.0.1",
-    "hel-micro": "^4.0.2"
+    "hel-micro": "^4.0.2",
+    "hel-iso": "^4.0.3"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
