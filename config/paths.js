@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 // const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath');
 const helDevUtils = require('hel-dev-utils');
-const subApp = require('./appInfo');
+const appInfo = require('./appInfo');
 
 
 // Make sure any symlinks in the project folder are resolved:
@@ -24,7 +24,7 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 //   require(resolveApp('package.json')).homepage,
 //   process.env.PUBLIC_URL
 // );
-const publicUrlOrPath = subApp.getPublicPathOrUrl('/');
+const publicUrlOrPath = appInfo.getPublicPathOrUrl();
 
 const moduleFileExtensions = [
   'web.mjs',

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
-const subAppInfo = require('./appInfo');
+const appInfo = require('./appInfo');
 
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
@@ -101,6 +101,6 @@ function getClientEnvironment(publicUrl) {
 
 process.env.REACT_APP_BUILD_TIME = new Date().toLocaleString();
 process.env.REACT_APP_IS_LOCAL = process.env.IS_LOCAL || '';
-process.env.REACT_APP_NAME = subAppInfo.name;
+process.env.REACT_APP_NAME = appInfo.name;
 
 module.exports = getClientEnvironment;
