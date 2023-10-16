@@ -5,7 +5,7 @@
   "module": "hel_proxy_es/entry.js",
   "unpkg": "hel_dist/index.html",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "dependencies": {
     "@types/lodash": "^4.14.182",
     "hel-iso": "^4.3.2",
